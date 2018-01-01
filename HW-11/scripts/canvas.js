@@ -145,15 +145,15 @@ function drawSquare()
   }
     function drawSquare3()
     {
-        ctx.clearRect(0,0,800,600);
-        ctx.fillStyle = square1.mainColor;
-        ctx.fillRect(square1.x, square1.y, square1.width, square1.height);
-        ctx.fillStyle = square2.mainColor;
-        ctx.fillRect(square2.x, square2.y, square2.width, square2.height);
-        for(var i = 0; i < squareArray.length; i++)
+        // ctx.clearRect(0,0,800,600);
+        // ctx.fillStyle = square1.mainColor;
+        // ctx.fillRect(square1.x, square1.y, square1.width, square1.height);
+        // ctx.fillStyle = square2.mainColor;
+        // ctx.fillRect(square2.x, square2.y, square2.width, square2.height);
+        for(var i = 0; i < square3Array.length; i++)
         {
-            ctx.fillStyle = squareArray[i].mainColor;
-            ctx.fillRect(squareArray[i].x, squareArray[i].y, squareArray[i].width, squareArray[i].height);
+            ctx.fillStyle = square3Array[i].mainColor;
+            ctx.fillRect(square3Array[i].x, square3Array[i].y, square3Array[i].width, square3Array[i].height);
         }
 
     ctx.font = "30px Arial";
