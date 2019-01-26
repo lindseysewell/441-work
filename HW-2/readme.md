@@ -1,0 +1,3 @@
+# Homework 2
+
+This week's assignment felt like a good intro into Javascript. I know a bit about Javascript from p5.js, but I don't remember it very well and I never truly understood it. Hopefully this pace will help me understand it better. It was kind of strange using HTML to make the background color of this project because at this point, I'm pretty used to styling in css. At an early stage of this project, I forget to set the charset to utf-8, so I got a warning in my console.log that some of the words could end up garbled. I'm glad I got that figured out on my own. Overall, I think this was a successful project.
