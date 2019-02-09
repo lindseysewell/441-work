@@ -3,25 +3,110 @@
       <link rel="stylesheet" type="text/css" href="style.css">
         <title>Homework 3</title>
         <script>
+
+        function GetChoice1()
+        {
+
+          var MyChoice1 = document.getElementById("choice").value;
+          var MyQuestion1 = document.getElementById ("question")
+          if (MyChoice1 === "a")
+          {
+            MyQuestion1.innerHTML= "You turn and walk away into the thick of the woods. You find yourself lost, but you see a cottage nearby. Do you (c) go up and ask for directions, or (d) keep walking?"
+          }
+          else if (MyChoice1 === "b")
+          {
+            MyQuestion1.innerHTML= "You walk forward and sit down at the picnic. Do you (e) eat a sandwich, or (f) wait patiently?"
+          }
+          else if (MyChoice1 === "c")
+          {
+            MyQuestion1.innerHTML= "You approach the cottage and knock on the door. A voice within requests the password. Is it (g),'seashell,' or (h), 'rhubarb'?"
+          }
+          else if (MyChoice1 === "d")
+          {
+            MyQuestion1.innerHTML= "You keep walking until the path ends. You are lost irreversibly in the woods. Enter 'restart' to start again."
+          }
+          else if (MyChoice1 === "e")
+          {
+            MyQuestion1.innerHTML= "The sandwich is delicious, but you begin to feel very woozy after eating it. Your vision fades to black. Enter 'restart' to start again."
+          }
+          else if (MyChoice1 === "f")
+          {
+            MyQuestion1.innerHTML= "You see two figures approach in the distance. It appears to be a witch and an ogre. Do you (i) run away, or (j) greet them?"
+          }
+          else if (MyChoice1 === "g")
+          {
+            MyQuestion1.innerHTML= "'seashell,' you say. You hear a lock slide, and the door creaks open. Do you (k) ask for directions, or (l) walk in?"
+          }
+          else if (MyChoice1 === "h")
+          {
+            MyQuestion1.innerHTML= "'rhubarb,' you say. There is no response. You turn and wander back into the woods. Soon it is dark, and you are irreversibly lost. Enter 'restart' to start again."
+          }
+          else if (MyChoice1 === "i")
+          {
+            MyQuestion1.innerHTML= "You turn and run away. In your haste, you trip on a rock and hit your head. Your world fades to black. Enter 'restart' to start again."
+          }
+          else if (MyChoice1 === "j")
+          {
+            MyQuestion1.innerHTML= "The witch greets you jovially. 'Would you like to sit with us and have a snack? Don't eat the sandwiches, though. My ogre friend here is an insomniac, so they are filled with ogre-strength sedatives. Have a slice of pie instead.' Do you (m) take the pie, or (n) run for your life?"
+          }
+          else if (MyChoice1 === "k")
+          {
+            MyQuestion1.innerHTML= "You ask for directions out of the woods. The voice from within obliges, and soon you are out of the woods and safely in your bed. THE END."
+          }
+          else if (MyChoice1 === "l")
+          {
+            MyQuestion1.innerHTML= "You try to walk in, but the door shuts abruptly, pinching your fingers. You walk away, nursing your injury, and find yourself lost irreversibly. Enter 'restart' to start again."
+          }
+          else if (MyChoice1 === "m")
+          {
+            MyQuestion1.innerHTML= "You enjoy a slice of strawberry rhubarb pie with your new friends. The witch offers to (o) give you a ride home, or (p) let you crash at her place for the night. Which do you do?"
+          }
+          else if (MyChoice1 === "n")
+          {
+            MyQuestion1.innerHTML= "You turn and run into the woods. You hear the ogre crying in the background, but you don't turn around. You eventually find yourself lost, unable to find your way back. Enter 'restart' to begin again."
+          }
+          else if (MyChoice1 === "o")
+          {
+            MyQuestion1.innerHTML= "The witch and the ogre drop you off at home. You feel full and happy as you drift off to sleep. THE END."
+          }
+          else if (MyChoice1 === "p")
+          {
+            MyQuestion1.innerHTML= "You stay up late into the night talking with the witch and braiding each others' hair. The ogre is fast asleep. The next day, the witch drops you off at home. THE END."
+          }
+          else if (MyChoice1 === "restart")
+          {
+            location.reload();
+          }
+          else
+          {
+              MyQuestion1.innerHTML = "Invalid answer";
+          }
+        };
+
             function Answerone()
             {
-                document.write("<h3> Keep walking. That looks like a trap. </h3>");
+                document.write("<h3> a. Keep walking. That looks like a trap. </h3>");
             }
             function Answertwo()
             {
-                document.write("<h3> Investigate. Maybe whoever left it will share! </h3>");
+                document.write("<h3> b. Investigate. Maybe whoever left it will share! </h3>");
             }
         </script>
 
     </head>
     <body>
         <div id="changeme">Lindsey Sewell</div>
-      <center>  <h1> Choose your own adventure </h1> </center>
-    <center>  <h2> You come across a delicious-smelling picnic set up in a clearing in the woods. What do you do? </h2> </center>
-  <center> <script>
-      Answerone();
-      Answertwo();
-    </script> </center>
-  <center>  <img src="images/picnic.png" alt="Picnic"> </center>
+      <center>  <h1> Lost in the Woods </h1> </center>
+  <div id="question">
+ You are lost in the woods when you come across a delicious-smelling picnic set up in a clearing. What do you do?
+(a) Keep walking. That looks like a trap.
+(b) Investigate. Maybe whoever left it will share!
+
+  </div>
+
+  <input type="text" size="30" id="choice" value="a or b?">
+  <button id="btnSubmit" onclick="GetChoice1();">Click to continue</button>
+
+
     </body>
 </html>
