@@ -10,6 +10,7 @@ Here is a picture of my code:
 
 I probably should have copied my files into a homework 4 folder, but I didn't, and now we're here. I had a problem with some of the functionality of this project that put me into a cycle of searching for errors that turned out to be a case-sensitive problem.
 
+Choices:
 a-c-g-k (end)
 a-c-h (dead)
 a-d (dead)
