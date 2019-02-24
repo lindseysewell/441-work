@@ -14,14 +14,14 @@ function printBlanks()
 function createRandomImageArray()
 {
 
-    var actualImagePath = ["images/cat1.png", "images/cat2.png","images/cat3.png","images/cat4.png","images/cat5.png","images/cat6.png","images/cat7.png","images/cat1.png","images/cat8.png","images/cat9.png","images/cat10.png" ];
+    var actualImagePath = ["images/cat1.png", "images/cat2.png","images/cat3.png","images/cat4.png","images/cat5.png"];
 
     var count = [0,0,0,0,0,0,0,0,0,0];
 
     while(actualImages.length < 10)
     {
       var randomNumber = Math.floor(Math.random() * actualImagePath.length);
-        if(count[randomNumber] < 5)
+        if(count[randomNumber] < 2)
         {
             actualImages.push(actualImagePath[randomNumber]);
             count[randomNumber] = count[randomNumber] + 1;

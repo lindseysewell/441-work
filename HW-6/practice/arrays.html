@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Homework 5</title>
+        <script>
+            function printArray()
+            {
+                var blanks = [ [ "<img sec='images/blank1.png'>"];[ "<img sec='images/blank2.png'>"];[ "<img sec='images/blank3.png'>"];[ "<img sec='images/blank4.png'>"];[ "<img sec='images/blank5.png'>"];[ "<img sec='images/blank6.png'>"];[ "<img sec='images/blank7.png'>"];[ "<img sec='images/blank8.png'>"];[ "<img sec='images/blank9.png'>"];[ "<img sec='images/blank10.png'>"];]
+                var allBlanks = "";
+                for(var i = 0; i < blanks.length; i++)
+                {
+                    allBlanks += blanks[i] + "<br>";
+                }
+                document.getElementById("myBlanks").innerHTML = allBlanks;
+            }
+        </script>
+    </head>
+    <body onload="printArray();">
+        <div id="myBlanks"></div>
+    </body>
+</html>
