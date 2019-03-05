@@ -21,7 +21,7 @@ class ViewFinder
         // you can just concatenate more information here rather
         // than creating another toString - you only want one toString
     }
-    get thename()
+    get theName()
     {
         return this.name;
     }
