@@ -1,10 +1,11 @@
-
+var imageArray = ["images/dancer.jpg", "images/elf2.jpg", "images/unocirn.jpg"];
 $(document).ready(function(){
 
 
     $("button").click(function(){
 
         //$("#stuff").animate({top:400});
+        fadeImage1();
         moveSquare1();
         moveSquare1();
         moveSquare1();
@@ -54,3 +55,10 @@ function fadeText()
   $( ".stuff" ).fadeOut( "slow").fadeIn("slow"); // since you create a class stuff, you want to use the "." operator to get to it
 
 }
+function fadeImage1()
+{
+$("#image1").fadeOut("slow").fadeIn("slow", function(){
+$("#image1").attr("src", imageArray[randomNumber]);
+});
+}
+var randomNumber = Math.floor(Math.random() * 3);
