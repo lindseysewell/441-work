@@ -1,0 +1,56 @@
+#square1 {
+  opacity: 0.5;
+   width: 100px;
+   height: 100px;
+   background: cyan;
+   position: absolute;
+   left: 0;
+   top: 300;
+ }
+ #square2 {
+   opacity: 0.25;
+    width: 200px;
+    height: 200px;
+    background: limegreen;
+    position: absolute;
+    left: 0;
+    top: 100;
+  }
+
+ #stuff{
+   background: blue;
+ }
+
+ #third{
+   background: green;
+ }
+
+ body{
+     background-color: powderblue;
+ }
+
+ #image1{
+   height: auto;
+    width: auto;
+    max-height: 300px;
+    position: absolute;
+    top: 300;
+
+ }
+ #image2{
+  height: auto;
+   width: auto;
+   max-height:300px;
+   position: absolute;
+   top: 700;
+
+}
+
+#image3{
+  height: auto;
+   width: auto;
+   max-height: 300px;
+   position: absolute;
+   top: 900;
+
+}
