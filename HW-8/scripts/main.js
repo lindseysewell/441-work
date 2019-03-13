@@ -57,7 +57,7 @@ function fadeText()
 }
 function fadeImage1()
 {
-$("#image1", "#image2", "#image3").fadeOut("slow").fadeIn("slow", function(){
+$("#image1").fadeOut("slow").fadeIn("slow", function(){
 $("#image1", "#image2", "#image3").attr("src", imageArray[randomNumber]);
 });
 }
