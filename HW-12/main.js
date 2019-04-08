@@ -21,7 +21,7 @@
   }
 
 if (hasCollided) {
-
+ctx.fillStyle = "Red";
 }
 
    $(document).ready(function(){
