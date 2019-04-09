@@ -80,7 +80,13 @@ getKey(event);
        {
          console.log ("test");
         $("#myCanvas").css ("background-color", " red");
-       }
+        if (hasCollided(square, square3))
+        {
+
+         $("#myCanvas").css ("background-color", "orange");
+        // ctx.fillStyle(square) = "blue";
+      }
+    }
        drawSquare();
    }
 
