@@ -11,22 +11,21 @@
    drawSquare();
    setInterval(update, 1000/60);
 
-   function hasCollided(square1, square2) {
+   function hasCollided(object1, object2) {
+     console.log (object1.X);
     return !(
-        ((object1.y + object1.height) < (object2.y)) ||
-        (object1.y > (object2.y + object2.height)) ||
-        ((object1.x + object1.width) < object2.x) ||
-        (object1.x > (object2.x + object2.width))
+        ((object1.Y + object1.H) < (object2.Y)) ||
+        (object1.Y > (object2.Y + object2.H)) ||
+        ((object1.X + object1.W) < object2.X) ||
+        (object1.X > (object2.X + object2.W))
     );
   }
 
-if (hasCollided) {
-ctx.fillStyle = "Red";
-}
 
    $(document).ready(function(){
 $(this).keypress(function(event){
 getKey(event);
+
 });
 });
 
@@ -75,6 +74,12 @@ getKey(event);
        else if(actualLetter == "d")
        {
            moveRight();
+       }
+       console.log ("aaaaaaaa");
+       if (hasCollided(square, square2))
+       {
+         console.log ("test");
+        $("#myCanvas").css ("background-color", " red");
        }
        drawSquare();
    }

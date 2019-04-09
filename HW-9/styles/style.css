@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+}
+h1 {
+  color: cyan;
+  font-family: monospace;
+  font-size:35px;
+}
+p {
+  color: limegreen;
+  font-size: 20px;
+  font-family:monospace;
+}
