@@ -1,4 +1,4 @@
-class Square3{
+class Square{
 
     constructor(xCoord,yCoord,objectHeight,objectWidth, color)
     {

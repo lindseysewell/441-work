@@ -26,6 +26,7 @@ function setup()
     ctx = canvas.getContext("2d");
 
     // create two objects
+    drawSquare3();
     square1 = new Square(100,100,50,50,"lightblue");
     square2 = new Square(400,400,100,100,"cerulean");
     square3 = new Square(300,300,100,100,"red");
@@ -39,7 +40,7 @@ function setup()
     $.getJSON("data/information2.json", function(data) {
         for(var i = 0; i < data.squares3.length; i++)
         {
-            square3Array.push(new Square3(data.squares3[i].x,data.squares3[i].y, data.squares3[i].h, data.squares3[i].w, data.squares3[i].color));
+            square3Array.push(new Square(data.squares3[i].x,data.squares3[i].y, data.squares3[i].h, data.squares3[i].w, data.squares3[i].color));
         }
         drawSquare();
     });
@@ -108,6 +109,7 @@ function getKey(event)
 
     }
     drawSquare();
+    drawSquare3();
 
 }
 
