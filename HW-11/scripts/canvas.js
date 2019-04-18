@@ -37,9 +37,9 @@ function setup()
         drawSquare();
     });
     $.getJSON("data/information2.json", function(data) {
-        for(var i = 0; i < data.squares.length; i++)
+        for(var i = 0; i < data.squares3.length; i++)
         {
-            squareArray.push(new Square(data.squares[i].x,data.squares[i].y, data.squares[i].h, data.squares[i].w, data.squares[i].color));
+            square3Array.push(new Square3(data.squares3[i].x,data.squares3[i].y, data.squares3[i].h, data.squares3[i].w, data.squares3[i].color));
         }
         drawSquare();
     });

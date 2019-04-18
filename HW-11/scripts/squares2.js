@@ -1,4 +1,4 @@
-class Square{
+class Square3{
 
     constructor(xCoord,yCoord,objectHeight,objectWidth, color)
     {
@@ -9,34 +9,34 @@ class Square{
         this.color = color;
     }
 
-    get x()
+    get x3()
     {
         return this.xCoord;
     }
 
-    set x(value)
+    set x3(value)
     {
         this.xCoord = value;
     }
-    get y()
+    get y3()
     {
         return this.yCoord;
     }
-    set y(value)
+    set y3(value)
     {
         this.yCoord = value;
     }
 
-    get height()
+    get height3()
     {
         return this.objectHeight;
     }
 
-    get width()
+    get width3()
     {
         return this.objectWidth;
     }
-    get mainColor()
+    get mainColor3()
     {
         return this.color;
     }
