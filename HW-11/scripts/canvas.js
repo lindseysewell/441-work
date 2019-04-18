@@ -2,10 +2,11 @@ var canvas;
 var ctx;
 var x = 50;
 var y = 50;
-var square1, square2;
+var square1, square2, square3;
 var direction;
 var questions;
 var squareArray = [];
+var square3Array = [];
 var lives = 3;
 $(document).ready(function(){
 
@@ -27,12 +28,21 @@ function setup()
     // create two objects
     square1 = new Square(100,100,50,50,"lightblue");
     square2 = new Square(400,400,100,100,"cerulean");
+    square3 = new Square(300,300,100,100,"red");
     $.getJSON("data/information.json", function(data) {
         for(var i = 0; i < data.squares.length; i++)
         {
             squareArray.push(new Square(data.squares[i].x,data.squares[i].y, data.squares[i].h, data.squares[i].w, data.squares[i].color));
         }
         drawSquare();
+    });
+
+    $.getJSON("data/information2.json", function(data) {
+        for(var i = 0; i < data.squares3.length; i++)
+        {
+            square3Array.push(new Square3(data.squares3[i].x,data.squares3[i].y, data.squares3[i].h, data.squares3[i].w, data.squares3[i].color));
+        }
+        drawSquare3();
     });
 
 
@@ -74,7 +84,7 @@ function getKey(event)
             break;
         }
 
-  
+
     }
     if(test || test2)
     {
@@ -130,6 +140,19 @@ function drawSquare()
         ctx.fillStyle = squareArray[i].mainColor;
         ctx.fillRect(squareArray[i].x, squareArray[i].y, squareArray[i].width, squareArray[i].height);
     }
+  }
+    function drawSquare3()
+    {
+        ctx.clearRect(0,0,800,600);
+        ctx.fillStyle = square1.mainColor;
+        ctx.fillRect(square1.x, square1.y, square1.width, square1.height);
+        ctx.fillStyle = square2.mainColor;
+        ctx.fillRect(square2.x, square2.y, square2.width, square2.height);
+        for(var i = 0; i < squareArray.length; i++)
+        {
+            ctx.fillStyle = squareArray[i].mainColor;
+            ctx.fillRect(squareArray[i].x, squareArray[i].y, squareArray[i].width, squareArray[i].height);
+        }
 
     ctx.font = "30px Arial";
     ctx.fillText("Lives: " + lives, 10, 50);
