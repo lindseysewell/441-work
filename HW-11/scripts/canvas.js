@@ -8,6 +8,8 @@ var questions;
 var squareArray = [];
 var square3Array = [];
 var lives = 3;
+var score = 0;
+var prizeNum;
 $(document).ready(function(){
 
     setup();
@@ -75,6 +77,7 @@ function getKey(event)
         direction = "right";
     }
     var test = hasCollided(square1,square2);
+    var test3 = hasCollided(square1,square3);
     var test2 = false;
     for(var i = 0; i < squareArray.length; i++)
     {
