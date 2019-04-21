@@ -90,25 +90,32 @@ function getKey(event)
 
 
     }
+
+
+            test3 = hasCollided(square1,square3Array[i]);
+            if(test3 == true)
+            {
+}
+
     if(test || test2)
     {
-        lives--;
-        if(direction == "left")
-        {
-            moveRight();
-        }
-        else if(direction == "right")
-        {
-            moveLeft();
-        }
-        else if(direction == "up")
-        {
-            moveDown();
-        }
-        else if(direction == "down")
-        {
-            moveUp();
-        }
+        prizeNum++;
+        // if(direction == "left")
+        // {
+        //     moveRight();
+        // }
+        // else if(direction == "right")
+        // {
+        //     moveLeft();
+        // }
+        // else if(direction == "up")
+        // {
+        //     moveDown();
+        // }
+        // else if(direction == "down")
+        // {
+        //     moveUp();
+        // }
 
     }
     drawSquare();
@@ -161,6 +168,7 @@ function drawSquare()
 
     ctx.font = "30px Arial";
     ctx.fillText("Lives: " + lives, 10, 50);
+    ctx.fillText("Points: " + prizeNum, 50, 50);
 
 }
 
