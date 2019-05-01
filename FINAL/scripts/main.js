@@ -44,7 +44,7 @@ function drawSquare()
    drawSquare ();
    displayPrompt ();
    });
-$.getJSON("data/palettes.json",function (responseText) {
+$.getJSON("data/palettes.JSON",function (responseText) {
 
     console.log(responseText);
     
